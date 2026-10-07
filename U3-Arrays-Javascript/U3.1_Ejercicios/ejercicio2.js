@@ -1,7 +1,7 @@
-let paises = ["España", "Francia", "Alemania", "Italia"];
+const paises = ["España", "Francia", "Alemania", "Italia"];
 
 // Recorremos y mostramos todos
-for (let i = 0; i < paises.length; i++) {
+for (let i in paises) {
     console.log(paises[i]);
 }
 
@@ -9,6 +9,6 @@ for (let i = 0; i < paises.length; i++) {
 delete paises[0];
 
 // Volvemos a recorrerlo
-for (let i = 0; i < paises.length; i++) {
+for (let i in paises) {
     console.log(paises[i]);
 }
