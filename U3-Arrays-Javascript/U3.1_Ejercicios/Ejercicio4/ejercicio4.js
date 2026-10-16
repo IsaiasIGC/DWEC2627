@@ -14,4 +14,5 @@ for (let i in palabras) {
     }
 }
 
-console.log(palindromos);
+console.log("Palindromos:")
+console.log(...palindromos);

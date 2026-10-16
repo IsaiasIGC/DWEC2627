@@ -11,4 +11,5 @@ for (let i = 0; i < nombres.length; i++) {
 }
 
 // Mostramos el array con los mayores de edad
-console.log(mayoresDeEdad);
+console.log("Mayores de edad:");
+console.log(...mayoresDeEdad);
