@@ -8,14 +8,14 @@ let unicos = [...conjunto];
 
 // Validamos que se hayan eliminado los duplicados
 if (unicos.length < valores.length) {
-    console.log("Validación correcta: se han eliminado los números repetidos");
+    console.log("Se han eliminado los números repetidos");
 } else {
     console.log("No se han encontrado números repetidos");
 }
 
 console.log("Array original:");
-console.log(valores);
+console.log(...valores);
 
 console.log("Array sin duplicados:");
-console.log(unicos);
+console.log(...unicos);
 

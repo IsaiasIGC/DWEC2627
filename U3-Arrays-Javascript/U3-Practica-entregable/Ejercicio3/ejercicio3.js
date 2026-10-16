@@ -16,7 +16,7 @@ if (mapa.has("Ana")) {
 
 // Validamos que Ana tenga la edad correcta
 if (mapa.get("Ana") === 29) {
-    console.log("Validación correcta: Ana tiene 29 años");
+    console.log("Ahora Ana tiene 29 años");
 } else {
     console.log("Error: la edad de Ana no se ha actualizado");
 }

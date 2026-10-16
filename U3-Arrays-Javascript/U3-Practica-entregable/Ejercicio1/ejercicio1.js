@@ -13,45 +13,47 @@ data.push(
 
 // Validamos que se hayan añadido las dos personas
 if (data.length === 6) {
-    console.log("Validación correcta: se han añadido las dos personas");
+    console.log("Se han añadido las dos personas");
 } else {
     console.log("Error: el número de personas no es correcto");
 }
 
-console.log("Data con los nuevos elementos");
-console.log(data);
+console.log("DATA CON LOS NUEVOS ELEMENTOS");
+for (let i = 0; i < data.length; i++) {
+    console.log(
+        "Nombre: " + data[i].name +
+        " | Edad: " + data[i].age +
+        " | Teléfono: " + (data[i].telephone || data[i].phone)
+    );
+}
 
 // Ordenamos por edad
 data.sort(function (a1, a2) {
     return a1.age - a2.age;
 });
 
-// Validamos que las edades estén ordenadas de menor a mayor
-let ordenado = true;
-
-for (let i = 0; i < data.length - 1; i++) {
-    if (data[i].age > data[i + 1].age) {
-        ordenado = false;
-        break;
-    }
+console.log("DATA ORDENADA POR EDAD:");
+for (let i = 0; i < data.length; i++) {
+    console.log(
+        "Nombre: " + data[i].name +
+        " | Edad: " + data[i].age +
+        " | Teléfono: " + (data[i].telephone || data[i].phone)
+    );
 }
-
-if (ordenado) {
-    console.log("Validación correcta: las edades están ordenadas");
-} else {
-    console.log("Error: las edades no están ordenadas");
-}
-
-console.log("Data ordenada por edad:");
-console.log(data);
 
 // Ordenamos por nombre alfabéticamente
 data.sort(function(n1, n2) {
     return n1.name.localeCompare(n2.name);
 });
 
-console.log("Data ordenada por nombre:");
-console.log(data);
+console.log("DATA ORDENADA POR NOMBRE:");
+for (let i = 0; i < data.length; i++) {
+    console.log(
+        "Nombre: " + data[i].name +
+        " | Edad: " + data[i].age +
+        " | Teléfono: " + (data[i].telephone || data[i].phone)
+    );
+}
 
 // Creamos un nuevo array con los mayores de 30 años
 let mayoresDe30 = data.filter(function (persona) {
@@ -62,10 +64,16 @@ let mayoresDe30 = data.filter(function (persona) {
 if (mayoresDe30.every(function (persona) {
     return persona.age > 30;
 })) {
-    console.log("Validación correcta: todas las personas tienen más de 30 años");
+    console.log("Todas las personas tienen más de 30 años");
 } else {
     console.log("Error: hay personas de 30 años o menos");
 }
 
-console.log("Personas mayores de 30 años:");
-console.log(mayoresDe30);
+console.log("PERSONAS MAYORES DE 30 AÑOS:");
+for (let i = 0; i < mayoresDe30.length; i++) {
+    console.log(
+        "Nombre: " + mayoresDe30[i].name +
+        " | Edad: " + mayoresDe30[i].age +
+        " | Teléfono: " + (mayoresDe30[i].telephone || mayoresDe30[i].phone)
+    );
+}
